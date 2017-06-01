@@ -1,16 +1,16 @@
 ﻿<h1>@ViewBag.title</h1>
-
-@if (ViewBag.jobs != null)
-{
     <h3>@ViewBag.jobs.Count Result(s)</h3>
 
-    <table>
-        @foreach (KeyValuePair<string, string> column in ViewBag.jobs)
+    @for (int i = 0; i < ViewBag.Jobs.Count; i++)
+    {
+        @foreach (KeyValuePair<string, string> column in ViewBag.jobs[i])
         {
-            <tr>
-                <td>@column.Key</td>
-                <td>@column.Value</td>
-            </tr>
+            <table>
+                <tr>
+                    <td>@column.Key</td>
+                    <td>@column.Value</td>
+                </tr>
+            </table>
         }
-    </table>
-}
+    }
+    

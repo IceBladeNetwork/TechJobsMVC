@@ -2,11 +2,12 @@
 
 <h3>@ViewBag.jobs.Count Result(s)</h3>
 
-<table>
     @foreach (KeyValuePair<string, string> column in ViewBag.jobs)
     {
-        <tr>
-            <td>@column.Key</td><td>@column.Value</td>
-        </tr>
+        <table>
+            <tr>
+                <td>@column.Key</td>
+                <td>@column.Value</td>
+            </tr>
+        </table>
     }
-</table>
